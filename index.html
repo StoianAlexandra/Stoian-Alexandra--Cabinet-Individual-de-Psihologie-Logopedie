@@ -1,20 +1,95 @@
-<section id="articole">
-  <h2>Articole</h2>
-  <article>
-    <h3>Importanța dezvoltării limbajului în primii ani de viață</h3>
-    <p><em>Aprilie 2024</em></p>
-    <p>Descoperă cum influențează dezvoltarea timpurie a limbajului evoluția emoțională și cognitivă a copilului.</p>
-  </article>
-  <article>
-    <h3>Gestionarea anxietății la copii: strategii pentru părinți</h3>
-    <p><em>Martie 2024</em></p>
-    <p>Ghid practic pentru recunoașterea și susținerea copiilor care se confruntă cu anxietatea.</p>
-  </article>
-  <article>
-    <h3>Rolul jocului în terapia logopedică</h3>
-    <p><em>Februarie 2024</em></p>
-    <p>Află de ce jocul este esențial în stimularea limbajului și cum este integrat în ședințele de terapie logopedică.</p>
-  </article>
-  <a class="btn" href="#contact">Vezi toate articolele</a>
-</section>
-index.html
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Stoian Alexandra – Psiholog & Logoped</title>
+  <style>
+    :root{--primary:#5b8fd1;--secondary:#eef4fc;--text:#333333;--accent:#fff7e6;}
+    *{box-sizing:border-box;margin:0;padding:0;}
+    body{font-family:Arial,Helvetica,sans-serif;color:var(--text);background:var(--secondary);line-height:1.6;}
+    header{background:var(--primary);color:#fff;padding:2rem 1rem;text-align:center;position:relative;}
+    nav{margin-top:1rem;}
+    nav a{color:#fff;margin:0 1rem;text-decoration:none;font-weight:bold;}
+    header img.logo{position:absolute;top:1rem;left:1rem;width:60px;height:60px;border-radius:50%;object-fit:cover;border:3px solid #fff;}
+    section{padding:2rem 1rem;max-width:900px;margin:auto;background:#fff;border-radius:12px;box-shadow:0 2px 6px rgba(0,0,0,0.08);margin-bottom:1.5rem;}
+    h2{margin-bottom:1rem;color:var(--primary);}    
+    .btn{display:inline-block;background:var(--primary);color:#fff;padding:0.7rem 1.4rem;border-radius:6px;text-decoration:none;font-weight:bold;transition:opacity .2s;}
+    .btn:hover{opacity:0.9;}
+    footer{background:#dfe7f5;text-align:center;padding:1rem;font-size:0.9rem;}
+    form{display:flex;flex-direction:column;gap:0.8rem;}
+    input,textarea{padding:0.6rem;border:1px solid #c0cbe4;border-radius:6px;font-size:1rem;}
+    textarea{min-height:120px;resize:vertical;}
+    .photo{display:flex;justify-content:center;margin-bottom:1.5rem;}
+    .photo img{width:160px;height:160px;border-radius:50%;object-fit:cover;border:4px solid var(--primary);}    
+    .testimonials{background:var(--accent);padding:2rem 1rem;border-radius:12px;}
+    .testimonial{margin-bottom:1rem;font-style:italic;}
+  </style>
+</head>
+<body>
+  <header>
+    <img src="foto_profil.jpg" alt="Stoian Alexandra" class="logo" />
+    <h1>Stoian Alexandra – Psiholog & Logoped</h1>
+    <nav>
+      <a href="#despre">Despre</a>
+      <a href="#servicii">Servicii</a>
+      <a href="#articole">Articole</a>
+      <a href="#testimoniale">Testimoniale</a>
+      <a href="#programare">Programare</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section id="despre">
+    <div class="photo"><img src="foto_profil.jpg" alt="Stoian Alexandra" /></div>
+    <h2>Despre mine</h2>
+    <p>Sunt psiholog cu drept de liberă practică din anul 2008. De 4 ani îmi desfășor activitatea în propriul cabinet, lucrând cu copii, adolescenți și adulți. Îmi plac detaliile și modul în care anumite elemente determină altele; sunt pasionată de descoperirea mecanismelor din spatele comportamentelor și situațiilor, iar acest lucru mă ajută să înțeleg mai profund lumea interioară a fiecărui client.</p>
+
+    <p>În ultimii ani am dezvoltat o reală pasiune pentru logopedie și pentru lucrul cu copiii. Consider că terapia logopedică înseamnă mult mai mult decât pronunția corectă – ea pornește de la identificarea cauzelor, continuând cu jocuri și activități ce stimulează cognitiv, emoțional și motor. Limbajul este expresia nevoilor și sentimentelor, iar dezvoltarea lui implică tehnici precum jocul de rol, exerciții articulatorii, neurostimulare translinguală și gimnastică neuro.</p>
+
+    <p><strong>Motto:</strong> „Copiii trebuie învățați cum să gândească, nu ce să gândească.”</p>
+
+    <h3>Formare și participări:</h3>
+    <ul>
+      <li>Curs de formare – Evaluarea Personalității – de la normalitate la patologie</li>
+      <li>Curs „Tehnici de lucru în psihologia muncii și organizațională” – Centrul Euroregional de Psihologie Aplicată</li>
+      <li>Curs de formare profesională continuă – Psihotrauma – evaluare și intervenție psihologică</li>
+      <li>Curs – Școala de logopedie practică; Curs de logopedie – corectarea și dezvoltarea limbajului la copii</li>
+      <li>Atelier logopedic – Neurostimularea translinguală în terapia logopedică</li>
+      <li>Curs de prim ajutor pediatric</li>
+      <li>Program de formare – Terapie comportamentală aplicată la copiii cu TSA</li>
+      <li>Conferințe naționale și internaționale de logopedie și psihologie aplicată</li>
+    </ul>
+  </section>
+
+  <section id="tarife">
+    <h2>Tarife</h2>
+    <table style="width:100%;border-collapse:collapse;margin-bottom:1rem;">
+      <tr><th style="text-align:left;padding:8px;border-bottom:2px solid #ddd;">Serviciu</th><th style="text-align:left;padding:8px;border-bottom:2px solid #ddd;">Preț</th></tr>
+      <!-- Psihologie aplicată Securitate -->
+      <tr><td style="padding:8px;border-bottom:1px solid #eee;" colspan="2"><strong>Psihologia aplicată în domeniul Securității Naționale</strong></td></tr>
+      <tr><td style="padding:8px;border-bottom:1px solid #eee;">Aviz psihologic port/folosire arme letale/neletale</td><td style="padding:8px;border-bottom:1px solid #eee;">300 lei</td></tr>
+      <tr><td style="padding:8px;border-bottom:1px solid #eee;">Aviz psihologic înființare societate pază și protecție</td><td style="padding:8px;border-bottom:1px solid #eee;">250 lei</td></tr>
+      <tr><td style="padding:8px;border-bottom:1px solid #eee;">Aviz psihologic pirotehnician / artificier</td><td style="padding:8px;border-bottom:1px solid #eee;">250 lei</td></tr>
+      <tr><td style="padding:8px;border-bottom:1px solid #eee;">Aviz psihologic administrator firmă pază</td><td style="padding:8px;border-bottom:1px solid #eee;">250 lei</td></tr>
+      <tr><td style="padding:8px;border-bottom:1px solid #eee;">Aviz psihologic încadrare/concurs MAI/MAPN/ANI/ANP</td><td style="padding:8px;border-bottom:1px solid #eee;">250 lei</td></tr>
+      <tr><td style="padding:8px;border-bottom:1px solid #eee;">Aviz psihologic permis vânătoare</td><td style="padding:8px;border-bottom:1px solid #eee;">300 lei</td></tr>
+      <tr><td style="padding:8px;border-bottom:1px solid #eee;">Aviz psihologic atestat agenți pază și ordine</td><td style="padding:8px;border-bottom:1px solid #eee;">150 lei</td></tr>
+      <!-- Psihologie clinică -->
+      <tr><td style="padding:8px;border-bottom:1px solid #eee;" colspan="2"><strong>Psihologie clinică</strong></td></tr>
+      <tr><td style="padding:8px;border-bottom:1px solid #eee;">Examen psihologic Comisia Handicap Adulți (GAFS, MMSE)</td><td style="padding:8px;border-bottom:1px solid #eee;">350 lei</td></tr>
+      <tr><td style="padding:8px;border-bottom:1px solid #eee;">Deplasare la domiciliu pacienți nedeplasabili</td><td style="padding:8px;border-bottom:1px solid #eee;">400 lei</td></tr>
+      <tr><td style="padding:8px;border-bottom:1px solid #eee;">Examen psihologic copii cu dizabilități (Comisia Handicap)</td><td style="padding:8px;border-bottom:1px solid #eee;">300 lei</td></tr>
+      <tr><td style="padding:8px;border-bottom:1px solid #eee;">Evaluare Q.I. adolescenți & adulți (EVIQ‑S)</td><td style="padding:8px;border-bottom:1px solid #eee;">250 lei</td></tr>
+      <tr><td style="padding:8px;border-bottom:1px solid #eee;">Consiliere psihologică (50 min)</td><td style="padding:8px;border-bottom:1px solid  <label for="email">Email:</label>
+  <input type="email" id="email" name="email" required />
+  
+  <label for="data">Data dorită:</label>
+  <input type="date" id="data" name="data" required />
+  
+  <label for="comentarii">Comentarii / Întrebări:</label>
+  <textarea id="comentarii" name="comentarii"></textarea>
+  
+  <button type="submit" class="btn">Trimite</button>
+</form>
+

@@ -2,37 +2,244 @@
 <html lang="ro">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Stoian Alexandra – Psiholog & Logoped</title>
+  <meta name="description" content="Cabinet de Psihologie și Logopedie condus de Stoian Alexandra. Servicii de consiliere, evaluare și terapie pentru copii și adulți." />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
   <style>
-    :root{--primary:#5b8fd1;--secondary:#eef4fc;--text:#333333;--accent:#fff7e6;}
-    *{box-sizing:border-box;margin:0;padding:0;}
-    body{font-family:Arial,Helvetica,sans-serif;color:var(--text);background:var(--secondary);line-height:1.6;}
-    header{background:var(--primary);color:#fff;padding:2rem 1rem;text-align:center;position:relative;}
-    nav{margin-top:1rem;}
-    nav a{color:#fff;margin:0 1rem;text-decoration:none;font-weight:bold;}
-    header img.logo{position:absolute;top:1rem;left:1rem;width:60px;height:60px;border-radius:50%;object-fit:cover;border:3px solid #fff;}
-    section{padding:2rem 1rem;max-width:900px;margin:auto;background:#fff;border-radius:12px;box-shadow:0 2px 6px rgba(0,0,0,0.08);margin-bottom:1.5rem;}
-    h2{margin-bottom:1rem;color:var(--primary);}    
-    .btn{display:inline-block;background:var(--primary);color:#fff;padding:0.7rem 1.4rem;border-radius:6px;text-decoration:none;font-weight:bold;transition:opacity .2s;}
-    .btn:hover{opacity:0.9;}
-    footer{background:#dfe7f5;text-align:center;padding:1rem;font-size:0.9rem;}
-    form{display:flex;flex-direction:column;gap:0.8rem;}
-    input,textarea{padding:0.6rem;border:1px solid #c0cbe4;border-radius:6px;font-size:1rem;}
-    textarea{min-height:120px;resize:vertical;}
-    .photo{display:flex;justify-content:center;margin-bottom:1.5rem;}
-    .photo img{width:160px;height:160px;border-radius:50%;object-fit:cover;border:4px solid var(--primary);}    
-    .testimonials{background:var(--accent);padding:2rem 1rem;border-radius:12px;}
-    .testimonial{margin-bottom:1rem;font-style:italic;}
+    :root {
+      --primary: #5b8fd1;
+      --secondary: #eef4fc;
+      --text: #333;
+      --accent: #fff7e6;
+      --shadow: rgba(0, 0, 0, 0.1);
+    }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: 'Montserrat', Arial, sans-serif;
+      background: var(--secondary);
+      color: var(--text);
+      line-height: 1.6;
+      scroll-behavior: smooth;
+    }
+    a {
+      color: var(--primary);
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: var(--primary);
+      color: #fff;
+      padding: 1rem 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      box-shadow: 0 2px 6px var(--shadow);
+      z-index: 999;
+    }
+    header .logo {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+    header .logo img {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid #fff;
+    }
+    nav {
+      display: flex;
+      gap: 1.2rem;
+    }
+    nav a {
+      font-weight: 600;
+      padding: 0.4rem 0.8rem;
+      border-radius: 4px;
+      transition: background 0.3s ease;
+    }
+    nav a:hover,
+    nav a.active {
+      background: #3e6ac9;
+    }
+    main {
+      padding: 100px 20px 40px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    section {
+      background: #fff;
+      padding: 2rem 2rem 2.5rem;
+      border-radius: 12px;
+      box-shadow: 0 3px 10px var(--shadow);
+      margin-bottom: 2rem;
+    }
+    h1, h2, h3 {
+      color: var(--primary);
+      margin-bottom: 1rem;
+    }
+    p {
+      margin-bottom: 1rem;
+    }
+    ul {
+      list-style-type: disc;
+      margin-left: 1.5rem;
+      margin-bottom: 1rem;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 1rem;
+    }
+    th, td {
+      text-align: left;
+      padding: 0.8rem 0.5rem;
+      border-bottom: 1px solid #ddd;
+    }
+    th {
+      border-bottom: 2px solid var(--primary);
+      background: var(--secondary);
+    }
+    .btn {
+      background: var(--primary);
+      color: #fff;
+      padding: 0.75rem 1.5rem;
+      border-radius: 6px;
+      font-weight: 700;
+      display: inline-block;
+      cursor: pointer;
+      border: none;
+      transition: background 0.3s ease;
+      text-align: center;
+      text-decoration: none;
+    }
+    .btn:hover,
+    .btn:focus {
+      background: #3e6ac9;
+      outline: none;
+    }
+    .photo {
+      text-align: center;
+      margin-bottom: 1.5rem;
+    }
+    .photo img {
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid var(--primary);
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+    input, textarea, select {
+      padding: 0.7rem;
+      border: 1px solid #c0cbe4;
+      border-radius: 6px;
+      font-size: 1rem;
+      font-family: inherit;
+    }
+    textarea {
+      min-height: 120px;
+      resize: vertical;
+    }
+    .testimonials {
+      background: var(--accent);
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 1px 5px var(--shadow);
+    }
+    .testimonial {
+      margin-bottom: 1.2rem;
+      font-style: italic;
+      border-left: 4px solid var(--primary);
+      padding-left: 1rem;
+      color: #555;
+    }
+    footer {
+      text-align: center;
+      padding: 1rem 0;
+      background: var(--secondary);
+      font-size: 0.9rem;
+      color: #666;
+      border-top: 1px solid #ccc;
+    }
+    /* Responsive */
+    @media (max-width: 600px) {
+      nav {
+        flex-direction: column;
+        background: var(--primary);
+        position: fixed;
+        top: 60px;
+        right: 0;
+        width: 200px;
+        height: calc(100% - 60px);
+        transform: translateX(100%);
+        transition: transform 0.3s ease;
+        padding-top: 1rem;
+      }
+      nav.show {
+        transform: translateX(0);
+      }
+      nav a {
+        padding: 1rem 1.5rem;
+        border-bottom: 1px solid #3e6ac9;
+      }
+      .menu-toggle {
+        display: block;
+        cursor: pointer;
+        font-size: 1.5rem;
+      }
+    }
+    @media (min-width: 601px) {
+      .menu-toggle {
+        display: none;
+      }
+    }
+    /* Mesaj succes/eroare formular */
+    #form-message {
+      padding: 1rem;
+      border-radius: 6px;
+      margin-bottom: 1rem;
+      font-weight: 600;
+      display: none;
+    }
+    #form-message.success {
+      background-color: #d4edda;
+      color: #155724;
+      border: 1px solid #c3e6cb;
+    }
+    #form-message.error {
+      background-color: #f8d7da;
+      color: #721c24;
+      border: 1px solid #f5c6cb;
+    }
   </style>
 </head>
 <body>
   <header>
-    <img src="foto_profil.jpg" alt="Stoian Alexandra" class="logo" />
-    <h1>Stoian Alexandra – Psiholog & Logoped</h1>
-    <nav>
-      <a href="#despre">Despre</a>
+    <div class="logo">
+      <img src="foto_profil.jpg" alt="Stoian Alexandra" />
+      <h1>Stoian Alexandra</h1>
+    </div>
+    <div class="menu-toggle" aria-label="Toggle menu" role="button" tabindex="0">&#9776;</div>
+    <nav id="nav-menu" role="navigation" aria-label="Main menu">
+      <a href="#despre" class="active">Despre</a>
       <a href="#servicii">Servicii</a>
+      <a href="#tarife">Tarife</a>
       <a href="#articole">Articole</a>
       <a href="#testimoniale">Testimoniale</a>
       <a href="#programare">Programare</a>
@@ -40,56 +247,86 @@
     </nav>
   </header>
 
-  <section id="despre">
-    <div class="photo"><img src="foto_profil.jpg" alt="Stoian Alexandra" /></div>
-    <h2>Despre mine</h2>
-    <p>Sunt psiholog cu drept de liberă practică din anul 2008. De 4 ani îmi desfășor activitatea în propriul cabinet, lucrând cu copii, adolescenți și adulți. Îmi plac detaliile și modul în care anumite elemente determină altele; sunt pasionată de descoperirea mecanismelor din spatele comportamentelor și situațiilor, iar acest lucru mă ajută să înțeleg mai profund lumea interioară a fiecărui client.</p>
+  <main>
+    <!-- alte sectiuni (despre, servicii, tarife, articole, testimoniale) la fel ca mai sus -->
 
-    <p>În ultimii ani am dezvoltat o reală pasiune pentru logopedie și pentru lucrul cu copiii. Consider că terapia logopedică înseamnă mult mai mult decât pronunția corectă – ea pornește de la identificarea cauzelor, continuând cu jocuri și activități ce stimulează cognitiv, emoțional și motor. Limbajul este expresia nevoilor și sentimentelor, iar dezvoltarea lui implică tehnici precum jocul de rol, exerciții articulatorii, neurostimulare translinguală și gimnastică neuro.</p>
+    <section id="programare" tabindex="-1">
+      <h2>Programare</h2>
+      <p>Dacă dorești să faci o programare sau ai întrebări, completează formularul de mai jos sau contactează-mă direct.</p>
+      <div id="form-message"></div>
+      <form id="programare-form" action="send_form.php" method="POST" novalidate>
+        <label for="nume">Nume complet</label>
+        <input type="text" id="nume" name="nume" required placeholder="Numele tău" />
+        
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required placeholder="exemplu@mail.com" />
+        
+        <label for="telefon">Telefon</label>
+        <input type="tel" id="telefon" name="telefon" placeholder="Opțional" />
+        
+        <label for="serviciu">Serviciu dorit</label>
+        <select id="serviciu" name="serviciu" required>
+          <option value="">Selectează un serviciu</option>
+          <option value="Consiliere psihologică">Consiliere psihologică</option>
+          <option value="Terapie logopedică">Terapie logopedică</option>
+          <option value="Evaluare psihologică">Evaluare psihologică</option>
+          <option value="Ședință monitorizare">Ședință monitorizare</option>
+        </select>
+        
+        <label for="data">Data preferată</label>
+        <input type="date" id="data" name="data" required />
+        
+        <label for="mesaj">Mesaj / Detalii suplimentare</label>
+        <textarea id="mesaj" name="mesaj" placeholder="Poți adăuga detalii suplimentare"></textarea>
+        
+        <button type="submit" class="btn">Trimite</button>
+      </form>
+    </section>
 
-    <p><strong>Motto:</strong> „Copiii trebuie învățați cum să gândească, nu ce să gândească.”</p>
+    <section id="contact" tabindex="-1">
+      <h2>Contact</h2>
+      <p><strong>Email:</strong> <a href="mailto:contact@stoianalexandra.ro">contact@stoianalexandra.ro</a></p>
+      <p><strong>Telefon:</strong> <a href="tel:+40722123456">+40 722 123 456</a></p>
+      <p><strong>Adresă:</strong> Str. Exemplu 123, București</p>
+      <p>Urmărește-mă pe social media:</p>
+      <p>
+        <a href="https://www.facebook.com/stoianalexandra" target="_blank" rel="noopener">Facebook</a> |
+        <a href="https://www.instagram.com/stoianalexandra" target="_
+<?php
+header('Content-Type: application/json');
 
-    <h3>Formare și participări:</h3>
-    <ul>
-      <li>Curs de formare – Evaluarea Personalității – de la normalitate la patologie</li>
-      <li>Curs „Tehnici de lucru în psihologia muncii și organizațională” – Centrul Euroregional de Psihologie Aplicată</li>
-      <li>Curs de formare profesională continuă – Psihotrauma – evaluare și intervenție psihologică</li>
-      <li>Curs – Școala de logopedie practică; Curs de logopedie – corectarea și dezvoltarea limbajului la copii</li>
-      <li>Atelier logopedic – Neurostimularea translinguală în terapia logopedică</li>
-      <li>Curs de prim ajutor pediatric</li>
-      <li>Program de formare – Terapie comportamentală aplicată la copiii cu TSA</li>
-      <li>Conferințe naționale și internaționale de logopedie și psihologie aplicată</li>
-    </ul>
-  </section>
+// Configurare email destinatar
+$to = "contact@stoianalexandra.ro"; // schimba cu emailul tau real
+$subject = "Programare noua de pe site";
 
-  <section id="tarife">
-    <h2>Tarife</h2>
-    <table style="width:100%;border-collapse:collapse;margin-bottom:1rem;">
-      <tr><th style="text-align:left;padding:8px;border-bottom:2px solid #ddd;">Serviciu</th><th style="text-align:left;padding:8px;border-bottom:2px solid #ddd;">Preț</th></tr>
-      <!-- Psihologie aplicată Securitate -->
-      <tr><td style="padding:8px;border-bottom:1px solid #eee;" colspan="2"><strong>Psihologia aplicată în domeniul Securității Naționale</strong></td></tr>
-      <tr><td style="padding:8px;border-bottom:1px solid #eee;">Aviz psihologic port/folosire arme letale/neletale</td><td style="padding:8px;border-bottom:1px solid #eee;">300 lei</td></tr>
-      <tr><td style="padding:8px;border-bottom:1px solid #eee;">Aviz psihologic înființare societate pază și protecție</td><td style="padding:8px;border-bottom:1px solid #eee;">250 lei</td></tr>
-      <tr><td style="padding:8px;border-bottom:1px solid #eee;">Aviz psihologic pirotehnician / artificier</td><td style="padding:8px;border-bottom:1px solid #eee;">250 lei</td></tr>
-      <tr><td style="padding:8px;border-bottom:1px solid #eee;">Aviz psihologic administrator firmă pază</td><td style="padding:8px;border-bottom:1px solid #eee;">250 lei</td></tr>
-      <tr><td style="padding:8px;border-bottom:1px solid #eee;">Aviz psihologic încadrare/concurs MAI/MAPN/ANI/ANP</td><td style="padding:8px;border-bottom:1px solid #eee;">250 lei</td></tr>
-      <tr><td style="padding:8px;border-bottom:1px solid #eee;">Aviz psihologic permis vânătoare</td><td style="padding:8px;border-bottom:1px solid #eee;">300 lei</td></tr>
-      <tr><td style="padding:8px;border-bottom:1px solid #eee;">Aviz psihologic atestat agenți pază și ordine</td><td style="padding:8px;border-bottom:1px solid #eee;">150 lei</td></tr>
-      <!-- Psihologie clinică -->
-      <tr><td style="padding:8px;border-bottom:1px solid #eee;" colspan="2"><strong>Psihologie clinică</strong></td></tr>
-      <tr><td style="padding:8px;border-bottom:1px solid #eee;">Examen psihologic Comisia Handicap Adulți (GAFS, MMSE)</td><td style="padding:8px;border-bottom:1px solid #eee;">350 lei</td></tr>
-      <tr><td style="padding:8px;border-bottom:1px solid #eee;">Deplasare la domiciliu pacienți nedeplasabili</td><td style="padding:8px;border-bottom:1px solid #eee;">400 lei</td></tr>
-      <tr><td style="padding:8px;border-bottom:1px solid #eee;">Examen psihologic copii cu dizabilități (Comisia Handicap)</td><td style="padding:8px;border-bottom:1px solid #eee;">300 lei</td></tr>
-      <tr><td style="padding:8px;border-bottom:1px solid #eee;">Evaluare Q.I. adolescenți & adulți (EVIQ‑S)</td><td style="padding:8px;border-bottom:1px solid #eee;">250 lei</td></tr>
-      <tr><td style="padding:8px;border-bottom:1px solid #eee;">Consiliere psihologică (50 min)</td><td style="padding:8px;border-bottom:1px solid  <label for="email">Email:</label>
-  <input type="email" id="email" name="email" required />
-  
-  <label for="data">Data dorită:</label>
-  <input type="date" id="data" name="data" required />
-  
-  <label for="comentarii">Comentarii / Întrebări:</label>
-  <textarea id="comentarii" name="comentarii"></textarea>
-  
-  <button type="submit" class="btn">Trimite</button>
-</form>
+// Preluare date POST cu filtrare simpla
+$nume = filter_input(INPUT_POST, 'nume', FILTER_SANITIZE_STRING);
+$email = filter_input(INPUT_POST, 'email', FILTER_VALIDATE_EMAIL);
+$telefon = filter_input(INPUT_POST, 'telefon', FILTER_SANITIZE_STRING);
+$serviciu = filter_input(INPUT_POST, 'serviciu', FILTER_SANITIZE_STRING);
+$data = filter_input(INPUT_POST, 'data', FILTER_SANITIZE_STRING);
+$mesaj = filter_input(INPUT_POST, 'mesaj', FILTER_SANITIZE_STRING);
 
+if (!$nume || !$email || !$serviciu || !$data) {
+  echo json_encode(['success' => false, 'error' => 'Toate câmpurile obligatorii trebuie completate corect.']);
+  exit;
+}
+
+$message = "Ai primit o programare noua:\n\n";
+$message .= "Nume complet: $nume\n";
+$message .= "Email: $email\n";
+$message .= "Telefon: $telefon\n";
+$message .= "Serviciu dorit: $serviciu\n";
+$message .= "Data preferata: $data\n";
+$message .= "Mesaj/Detalii suplimentare: $mesaj\n";
+
+$headers = "From: $email\r\n";
+$headers .= "Reply-To: $email\r\n";
+
+// trimite mail
+if (mail($to, $subject, $message, $headers)) {
+  echo json_encode(['success' => true]);
+} else {
+  echo json_encode(['success' => false, 'error' => 'Nu am putut trimite email-ul.']);
+}
+?>
